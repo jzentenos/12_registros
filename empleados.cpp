@@ -45,11 +45,18 @@ int main(){
 		}	
 	}
 	cout<<"\nEmpleado con la menor venta en diciembre\n";
-	int menor=EMPLEADO[1].salario;
+	int menor;
+	int num=1;
+	string name;
 	for(int i=0; i<n; i++){
 		if(EMPLEADO[i].ventas[12]<30){
-			menor=EMPLEADO[i].salario;
+			menor=EMPLEADO[i].ventas[12];
+			num=EMPLEADO[i].numero;
+			name=EMPLEADO[i].nombre;
+		}
 	}
+		cout<<"Venta: "<<menor;
+		cout<<"\nNumero: "<<num;
+		cout<<"\nNombre: "<<name;
 	return 0;
-	}
 }
