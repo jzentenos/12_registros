@@ -37,12 +37,19 @@ int main(){
 	cout<<"\tEmpleado con mayores ventas\n";
 	cout<<"Numero: "<<EMPLEADO[pos].numero;
 	cout<<"\nNombre: "<<EMPLEADO[pos].nombre;
+	cout<<"\nEmpleado con el sueldo aumentado\n";
 	for(int i=0; i<n; i++){
 		if(ven[i]>100){
-			EMPLEADO[i].salario*=1.1;
+			EMPLEADO[i].salario=EMPLEADO[i].salario * 1.1;
+			cout<<"Salario "<<i+1<<": "<<EMPLEADO[i].salario;
 		}	
 	}
-	
-	
+	cout<<"\nEmpleado con la menor venta en diciembre\n";
+	int menor=EMPLEADO[1].salario;
+	for(int i=0; i<n; i++){
+		if(EMPLEADO[i].ventas[12]<30){
+			menor=EMPLEADO[i].salario;
+	}
 	return 0;
+	}
 }
