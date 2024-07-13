@@ -35,28 +35,26 @@ int main(){
 		}
 	}
 	cout<<"\tEmpleado con mayores ventas\n";
-	cout<<"Numero: "<<EMPLEADO[pos].numero;
+	cout<<"\nNumero: "<<EMPLEADO[pos].numero;
 	cout<<"\nNombre: "<<EMPLEADO[pos].nombre;
-	cout<<"\nEmpleado con el sueldo aumentado\n";
+	cout<<"\t\nEmpleados con el sueldo aumentado\n";
 	for(int i=0; i<n; i++){
 		if(ven[i]>100){
 			EMPLEADO[i].salario=EMPLEADO[i].salario * 1.1;
-			cout<<"Salario "<<i+1<<": "<<EMPLEADO[i].salario;
+			cout<<"\nSalario del empleado numero "<<EMPLEADO[i].numero<<": "<<EMPLEADO[i].salario;
 		}	
 	}
-	cout<<"\nEmpleado con la menor venta en diciembre\n";
-	int menor;
-	int num=1;
-	string name;
+	cout<<endl;
+	cout<<"\t\nEmpleado con la menor venta en diciembre\n";
+
 	for(int i=0; i<n; i++){
-		if(EMPLEADO[i].ventas[12]<30){
-			menor=EMPLEADO[i].ventas[12];
-			num=EMPLEADO[i].numero;
-			name=EMPLEADO[i].nombre;
+		//Error corregido: ventas[12] a ventas[11]
+		if(EMPLEADO[i].ventas[11]<30){
+			cout<<"\nVentas: "<<EMPLEADO[i].ventas[11];
+			cout<<"\nNumero: "<<EMPLEADO[i].numero;
+			cout<<"\nNombre: "<<EMPLEADO[i].nombre;
+			cout<<endl;
 		}
 	}
-		cout<<"Venta: "<<menor;
-		cout<<"\nNumero: "<<num;
-		cout<<"\nNombre: "<<name;
 	return 0;
 }
