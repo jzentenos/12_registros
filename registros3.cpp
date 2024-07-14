@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
 struct DATA{
 	string nombre;
@@ -38,5 +39,6 @@ int main(){
 			cout<<"\nNo existe personas que cumplan años en el mes "<<m<<endl;
 		}
 	}while(m!=0);
+	cout<<"\n\tTERMINANDO PROGRAMA..........."<<endl;
 	return 0;
 }
