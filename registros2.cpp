@@ -16,12 +16,11 @@ int main(){
 		cout<<"\n\tPersona "<<i+1<<endl;
 		cout<<"Nombres completos: ";
 		cin.ignore(); getline(cin,persona[i].nombre);
-		cout<<"DNI: "; cin>>persona[i].DNI;
-		lon= strlen(persona[i].DNI);
 		//Validacion de la cantidad de caracteres del DNI
-		if(lon>8){
-			cout<<"DNI incorrecto. \nIngrese nuevamente: "; cin>>persona[i].DNI;
-		}
+		do{
+			cout<<"DNI: "; cin>>persona[i].DNI;
+			lon= strlen(persona[i].DNI);
+		}while(lon!=8);
 		cout<<"Edad: "; cin>>persona[i].edad;
 	}
 	int cont=0;
