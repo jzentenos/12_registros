@@ -38,6 +38,5 @@ int main(){
 			cout<<"\nNo existe personas que cumplan años en el mes "<<m<<endl;
 		}
 	}while(m!=0);
-	cout<<"Ingrese el numero de un mes: "; cin>>m;
 	return 0;
 }
