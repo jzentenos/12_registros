@@ -18,14 +18,18 @@ int main(){
 		cout<<"Edad: "; cin>>persona[i].edad;
 	}
 	int cont=0;
+	float s_edades=0;
 	for(int i=0; i<n; i++){
 		if(persona[i].edad>50){
 			cont++;
 		}
+		s_edades+=persona[i].edad;
 	}
+	float prom=s_edades/n;
 	cout<<"\n\tCantidad de personas mayores a 50 años"<<endl;
 	cout<<cont;
-
+	cout<<"\n\tPromedio de edades"<<endl;
+	cout<<prom;
 	
 	for(int i=0; i<n; i++){
 		cout<<"\n\tPersona "<<i+1<<endl;
