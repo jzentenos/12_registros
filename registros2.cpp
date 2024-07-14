@@ -1,5 +1,5 @@
 #include<iostream>
-#include<string>
+#include<string.h>
 using namespace std;
 struct PER{
 	string nombre;
@@ -10,11 +10,16 @@ int main(){
 	int n;
 	cout<<"Ingrese la cantidad de personas: "; cin>>n;
 	PER persona[n];
+	int lon;
 	for(int i=0; i<n; i++){
 		cout<<"\n\tPersona "<<i+1<<endl;
 		cout<<"Nombres completos: ";
 		cin.ignore(); getline(cin,persona[i].nombre);
 		cout<<"DNI: "; cin>>persona[i].DNI;
+		lon= strlen(persona[i].DNI);
+		if(lon>8){
+			cout<<"DNI incorrecto. \nIngrese nuevamente: "; cin>>persona[i].DNI;
+		}
 		cout<<"Edad: "; cin>>persona[i].edad;
 	}
 	int cont=0;
@@ -32,7 +37,7 @@ int main(){
 	cout<<prom;
 	
 	for(int i=0; i<n; i++){
-		cout<<"\n\tPersona "<<i+1<<endl;
+		cout<<"\n\tDatos de la persona "<<i+1<<endl;
 		cout<<"\nNombres completos: "<<persona[i].nombre;
 		cout<<"\nDNI: "<<persona[i].DNI;
 		cout<<"\nEdad: "<<persona[i].edad;		
